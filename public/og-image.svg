@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Sahaay Digital social preview">
+  <defs>
+    <linearGradient id="pageBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#edf4fb" />
+    </linearGradient>
+    <linearGradient id="heroCard" x1="8%" y1="8%" x2="92%" y2="92%">
+      <stop offset="0%" stop-color="#0b3fb3" />
+      <stop offset="55%" stop-color="#0f5bb3" />
+      <stop offset="100%" stop-color="#0c6d79" />
+    </linearGradient>
+    <linearGradient id="panelBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f2f7fc" />
+    </linearGradient>
+    <radialGradient id="heroGlow" cx="20%" cy="18%" r="85%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.26" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="pageGlowLeft" cx="18%" cy="8%" r="44%">
+      <stop offset="0%" stop-color="#0b3fb3" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#0b3fb3" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="pageGlowRight" cx="86%" cy="14%" r="36%">
+      <stop offset="0%" stop-color="#07111f" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#07111f" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#0b1b34" stroke-opacity="0.08" />
+    </pattern>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#07111f" flood-opacity="0.08" />
+    </filter>
+    <filter id="cardShadow" x="-20%" y="-20%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#0b3fb3" flood-opacity="0.16" />
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#pageBg)" />
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.55" />
+  <rect width="1200" height="630" fill="url(#pageGlowLeft)" />
+  <rect width="1200" height="630" fill="url(#pageGlowRight)" />
+
+  <g filter="url(#softShadow)">
+    <rect x="70" y="56" width="1060" height="518" rx="34" fill="url(#panelBg)" />
+    <rect x="70" y="56" width="1060" height="518" rx="34" fill="none" stroke="#0b1b34" stroke-opacity="0.08" />
+  </g>
+
+  <g>
+    <rect x="112" y="100" width="180" height="42" rx="21" fill="#eef4fb" />
+    <text x="142" y="127" fill="#0b3fb3" font-family="sans-serif" font-size="22" font-weight="700" letter-spacing="2.2">SAHAAY DIGITAL</text>
+  </g>
+
+  <g filter="url(#cardShadow)">
+    <rect x="112" y="174" width="314" height="314" rx="72" fill="url(#heroCard)" />
+    <rect x="112" y="174" width="314" height="314" rx="72" fill="url(#heroGlow)" />
+
+    <path d="M206 254h92l58 58v120c0 23.196-18.804 42-42 42H206c-23.196 0-42-18.804-42-42V296c0-23.196 18.804-42 42-42Z" fill="#f8fbff" />
+    <path d="M298 254v47a7 7 0 0 0 7 7h47" fill="#dbe8ff" />
+    <path d="M228 360l34 34 70-74" fill="none" stroke="#0b3fb3" stroke-linecap="round" stroke-linejoin="round" stroke-width="20" />
+    <path d="M170 437c26 22 59 33 99 33 58 0 109-24 156-73" fill="none" stroke="#e9f3ff" stroke-linecap="round" stroke-width="22" />
+  </g>
+
+  <g>
+    <text x="490" y="224" fill="#07111f" font-family="sans-serif" font-size="76" font-weight="700" letter-spacing="-2">Sahaay Digital</text>
+    <text x="490" y="274" fill="#344154" font-family="serif" font-size="36">Independent documentation support</text>
+
+    <text x="490" y="346" fill="#344154" font-family="sans-serif" font-size="28">
+      <tspan x="490" dy="0">Private assistance for document-heavy online applications,</tspan>
+      <tspan x="490" dy="40">passport workflows, PAN, voter services, PT, Udyam/MSME,</tspan>
+      <tspan x="490" dy="40">and address-update guidance with clear legal boundaries.</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect x="490" y="462" width="218" height="54" rx="27" fill="#0b3fb3" fill-opacity="0.08" />
+    <text x="524" y="497" fill="#0b3fb3" font-family="sans-serif" font-size="22" font-weight="700">Official portal-first</text>
+
+    <rect x="728" y="462" width="190" height="54" rx="27" fill="#0b3fb3" fill-opacity="0.08" />
+    <text x="762" y="497" fill="#0b3fb3" font-family="sans-serif" font-size="22" font-weight="700">Privacy-aware</text>
+
+    <rect x="938" y="462" width="146" height="54" rx="27" fill="#0b3fb3" fill-opacity="0.08" />
+    <text x="971" y="497" fill="#0b3fb3" font-family="sans-serif" font-size="22" font-weight="700">Help-led</text>
+  </g>
+</svg>
