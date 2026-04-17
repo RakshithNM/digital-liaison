@@ -171,7 +171,7 @@ export const testimonials = [
   },
   {
     quote:
-      'I also got marriage certificate support for me and my wife. The document review and preparation guidance helped us keep the process straightforward and well-organized.',
+      'I got marriage certificate support for me and my wife. The document review and preparation guidance helped us keep the process straightforward and well-organized.',
     author: 'Private client',
     detail: 'Names are withheld for privacy.',
     services: ['Karnataka Hindu marriage certificate'],
