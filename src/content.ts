@@ -163,8 +163,7 @@ export const faqs = [
 
 export const testimonials = [
   {
-    quote:
-      'I got passport documentation verification support for my wife, me, and my mother. The guidance kept the paperwork clear, organized, and easier to review before moving ahead with the official process.',
+    quote: 'I got passport documentation verification support for my wife, me, and my mother. The guidance kept the paperwork clear, organized, and easier to review before moving ahead with the official process. My wife had a descrepancy in her father\'s name in her 10th marks card, the guidance helped in smooth proceedings at the PSK.',
     author: 'Private client',
     detail: 'Names are withheld for privacy.',
     services: ['Passport documentation verification'],
