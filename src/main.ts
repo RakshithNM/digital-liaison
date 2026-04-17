@@ -223,11 +223,7 @@ const renderHomePage = () => `
 
     <section id="blog" class="section">
       <h3>Blog</h3>
-      <h4>Write posts as markdown files and publish them with the site.</h4>
-      <p>
-        The blog reads local markdown files from <code>src/posts</code>, which makes it easy to draft practical
-        guides, checklists, and updates without changing the app structure.
-      </p>
+      <h4>Simple guides and To do's around getting government IDs</h4>
       ${renderBlogCards(blogPosts.slice(0, 3))}
       <p class="blog-section__link">
         <a class="back-link" href="${BLOG_INDEX_PATH}">View all posts</a>
