@@ -57,21 +57,21 @@ export const serviceCards = [
     body: 'Help with address-update readiness, supporting-document review, and understanding the official update path where the relevant channel permits it.',
     note: 'Aadhaar update availability, verification, and approval remain with UIDAI and its authorized update channels.',
   },
-  {
-    title: 'Online application assistance',
-    body: 'General help with document-heavy online applications, form preparation, checklist review, and submission readiness for services that offer official online workflows.',
-    note: 'Submission rules, portal availability, and final decisions remain with the relevant authority operating the official application system.',
-  },
-  {
-    title: 'Professional Tax registration support',
-    body: 'Help with PT registration readiness, document review, form preparation, and understanding the relevant state-specific online application process.',
-    note: 'Registration rules, department processing, approval, and certificate issuance remain with the relevant state tax authority and its official portal.',
-  },
+  // {
+  //   title: 'Professional Tax registration support',
+  //   body: 'Help with PT registration readiness, document review, form preparation, and understanding the relevant state-specific online application process.',
+  //   note: 'Registration rules, department processing, approval, and certificate issuance remain with the relevant state tax authority and its official portal.',
+  // },
   {
     title: 'Karnataka Hindu marriage certificate support',
     body: 'Help with document readiness, detail review, form-preparation guidance, and understanding the official Karnataka workflow for Hindu marriage certificate applications.',
     note: 'Eligibility, registration scrutiny, appointment requirements, and certificate issuance remain with the relevant Karnataka registration authority and its official process.',
   },
+  {
+    title: 'Online application assistance',
+    body: 'General help with document-heavy online applications, form preparation, checklist review, and submission readiness for services that offer official online workflows.',
+    note: 'Submission rules, portal availability, and final decisions remain with the relevant authority operating the official application system.',
+  }
 ] as const satisfies readonly Card[];
 
 export const processSteps = [
