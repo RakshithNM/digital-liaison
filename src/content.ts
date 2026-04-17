@@ -68,9 +68,9 @@ export const serviceCards = [
     note: 'Registration rules, department processing, approval, and certificate issuance remain with the relevant state tax authority and its official portal.',
   },
   {
-    title: 'Udyam/MSME registration support',
-    body: 'Help with Udyam registration readiness, business-details review, form preparation, and understanding the official MSME registration workflow.',
-    note: 'Eligibility, registration validation, and certificate issuance remain with the Government of India’s official Udyam registration system.',
+    title: 'Karnataka Hindu marriage certificate support',
+    body: 'Help with document readiness, detail review, form-preparation guidance, and understanding the official Karnataka workflow for Hindu marriage certificate applications.',
+    note: 'Eligibility, registration scrutiny, appointment requirements, and certificate issuance remain with the relevant Karnataka registration authority and its official process.',
   },
 ] as const satisfies readonly Card[];
 
