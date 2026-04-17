@@ -7,6 +7,7 @@ import {
   privacyPoints,
   processSteps,
   serviceCards,
+  testimonials,
   termsPoints,
 } from './content';
 import { blogPosts, getBlogPostBySlug, type BlogPost } from './blog';
@@ -97,6 +98,27 @@ const renderFaqs = () =>
     )
     .join('');
 
+const renderTestimonials = () =>
+  testimonials
+    .map(
+      ({ quote, author, detail, services }) => `
+        <article class="testimonial-card">
+          <p class="testimonial-card__eyebrow">Client feedback</p>
+          <blockquote class="testimonial-card__quote">
+            <p>${quote}</p>
+          </blockquote>
+          <ul class="testimonial-card__services" aria-label="Services used">
+            ${services
+              .map((service) => `<li class="testimonial-card__service">${service}</li>`)
+              .join('')}
+          </ul>
+          <p class="testimonial-card__author">${author}</p>
+          <p class="testimonial-card__detail">${detail}</p>
+        </article>
+      `,
+    )
+    .join('');
+
 const renderBlogTags = (tags: readonly string[]) =>
   tags.length
     ? `
@@ -148,6 +170,7 @@ const renderHeader = (route: Route) => `
     <nav class="site-nav" aria-label="Primary">
       <a href="/#services">Services</a>
       <a href="/#process">Process</a>
+      <a href="/#testimonials">Testimonials</a>
       <a href="/#portals">Portals</a>
       <a href="${BLOG_INDEX_PATH}"${route.kind === 'blogIndex' || route.kind === 'blogPost' ? ' aria-current="page"' : ''}>Blog</a>
       <a href="/#privacy">Privacy</a>
@@ -207,6 +230,18 @@ const renderHomePage = () => `
       <ol class="timeline">
         ${renderTimeline(processSteps)}
       </ol>
+    </section>
+
+    <section id="testimonials" class="section">
+      <h3>Testimonials</h3>
+      <h4>Recent feedback from document-support work.</h4>
+      <p>
+        Names are intentionally withheld, but the work scope is shown so visitors can understand the kind of support
+        clients have already used Sahaay Digital for.
+      </p>
+      <div class="testimonial-grid">
+        ${renderTestimonials()}
+      </div>
     </section>
 
     <section id="portals" class="section">

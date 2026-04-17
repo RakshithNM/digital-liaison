@@ -15,6 +15,13 @@ type FAQ = {
   answer: string;
 };
 
+type Testimonial = {
+  quote: string;
+  author: string;
+  detail: string;
+  services: readonly string[];
+};
+
 export const heroHighlights = [
   {
     title: 'Private assistance only',
@@ -153,3 +160,20 @@ export const faqs = [
       'Access should be limited to the people handling the matter, unrelated use is not allowed, personal data should not be sold, and retained records should be deleted or anonymized when they are no longer needed, subject to legal obligations.',
   },
 ] as const satisfies readonly FAQ[];
+
+export const testimonials = [
+  {
+    quote:
+      'I got passport documentation verification support for my wife, me, and my mother. The guidance kept the paperwork clear, organized, and easier to review before moving ahead with the official process.',
+    author: 'Private client',
+    detail: 'Names are withheld for privacy.',
+    services: ['Passport documentation verification'],
+  },
+  {
+    quote:
+      'I also got marriage certificate support for me and my wife. The document review and preparation guidance helped us keep the process straightforward and well-organized.',
+    author: 'Private client',
+    detail: 'Names are withheld for privacy.',
+    services: ['Karnataka Hindu marriage certificate'],
+  },
+] as const satisfies readonly Testimonial[];

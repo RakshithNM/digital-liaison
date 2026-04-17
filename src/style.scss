@@ -202,6 +202,8 @@ main > .section:nth-of-type(4) { animation-delay: 0.22s; }
 main > .section:nth-of-type(5) { animation-delay: 0.28s; }
 main > .section:nth-of-type(6) { animation-delay: 0.34s; }
 main > .section:nth-of-type(7) { animation-delay: 0.4s; }
+main > .section:nth-of-type(8) { animation-delay: 0.46s; }
+main > .section:nth-of-type(9) { animation-delay: 0.52s; }
 
 .hero {
   margin-top: var(--space-2);
@@ -374,11 +376,19 @@ p {
   margin-top: var(--space-3);
 }
 
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
 .highlight-card,
 .service-card,
 .portal-card,
 .policy-card,
 .blog-card,
+.testimonial-card,
 .empty-state,
 .blog-post {
   border: 1px solid var(--border);
@@ -391,6 +401,7 @@ p {
 .service-card,
 .portal-card,
 .blog-card,
+.testimonial-card,
 .empty-state {
   padding: var(--space-3);
 }
@@ -522,6 +533,74 @@ p {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.9rem;
+}
+
+.testimonial-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card::before {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  color: rgba(11, 63, 179, 0.12);
+  font-family: var(--serif-font);
+  font-size: 4.8rem;
+  line-height: 1;
+  content: '"';
+}
+
+.testimonial-card__eyebrow {
+  margin: 0 0 var(--space-2);
+  color: var(--muted-soft);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.testimonial-card__quote {
+  margin: 0;
+}
+
+.testimonial-card__quote p {
+  margin: 0;
+  max-width: 52ch;
+  color: var(--ink);
+  font-size: 1.02rem;
+  line-height: 1.85;
+}
+
+.testimonial-card__services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  padding: 0;
+  margin: var(--space-3) 0;
+  list-style: none;
+}
+
+.testimonial-card__service {
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.84);
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.testimonial-card__author {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.testimonial-card__detail {
+  margin: 0.25rem 0 0;
+  color: var(--muted-soft);
+  font-size: 0.84rem;
 }
 
 .blog-card__eyebrow {
