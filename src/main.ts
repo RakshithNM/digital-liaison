@@ -223,6 +223,9 @@ const renderBlogCards = (posts: readonly BlogPost[]) =>
 const renderHeader = (route: Route) => `
   <header class="site-header">
     <a class="brand" href="${HOME_PATH}" aria-label="Sahaay Digital home">
+      <span class="brand__icon" aria-hidden="true">
+        <img src="/favicon.svg" alt="" />
+      </span>
       <span class="brand__text">
         <strong>Sahaay Digital</strong>
         <small>Independent documentation support</small>
