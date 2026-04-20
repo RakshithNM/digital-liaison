@@ -2,6 +2,7 @@ type Card = {
   title: string;
   body: string;
   note?: string;
+  icon?: string;
 };
 
 type Portal = {
@@ -46,21 +47,25 @@ export const heroPills = [
 export const serviceCards = [
   {
     title: 'Passport application support',
+    icon: 'passport',
     body: 'Checklist review, data matching, form-preparation guidance, and appointment-readiness support for passport-related applications.',
     note: 'Approval, police verification, appointment availability, and passport issuance remain solely with Passport Seva and the Ministry of External Affairs.',
   },
   {
     title: 'Voter service guidance',
+    icon: 'voter',
     body: 'Help understanding voter registration, correction, and supporting-document requirements where the official portal or local process allows self-service applications.',
     note: 'Electoral decisions and record updates remain with the Election Commission of India and the relevant electoral registration authorities.',
   },
   {
     title: 'PAN application support',
+    icon: 'pan',
     body: 'Help with PAN application readiness, document review, correction guidance, and understanding the relevant submission path.',
     note: 'PAN allotment, correction approval, and issuance remain with the Income Tax Department and its authorized PAN service channels.',
   },
   {
     title: 'Aadhaar address update support',
+    icon: 'aadhaar',
     body: 'Help with address-update readiness, supporting-document review, and understanding the official update path where the relevant channel permits it.',
     note: 'Aadhaar update availability, verification, and approval remain with UIDAI and its authorized update channels.',
   },
@@ -71,11 +76,13 @@ export const serviceCards = [
   // },
   {
     title: 'Karnataka Hindu marriage certificate support',
+    icon: 'certificate',
     body: 'Help with document readiness, detail review, form-preparation guidance, and understanding the official Karnataka workflow for Hindu marriage certificate applications.',
     note: 'Eligibility, registration scrutiny, appointment requirements, and certificate issuance remain with the relevant Karnataka registration authority and its official process.',
   },
   {
     title: 'Online application assistance',
+    icon: 'online',
     body: 'General help with document-heavy online applications, form preparation, checklist review, and submission readiness for services that offer official online workflows.',
     note: 'Submission rules, portal availability, and final decisions remain with the relevant authority operating the official application system.',
   }

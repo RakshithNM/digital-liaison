@@ -38,14 +38,75 @@ const escapeHtml = (value: string) =>
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
 
+const cardIcons: Record<string, string> = {
+  passport: `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 4.75h7.25A3.75 3.75 0 0 1 18 8.5v10.75H9.75A2.75 2.75 0 0 0 7 22V4.75Z" />
+      <path d="M7 4.75h7.25A3.75 3.75 0 0 1 18 8.5" />
+      <circle cx="13.15" cy="11.5" r="2.35" />
+      <path d="M10.8 11.5h4.7M13.15 9.15c.85.7.85 3 0 4.7M13.15 9.15c-.85.7-.85 3 0 4.7" />
+    </svg>
+  `,
+  voter: `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 10.5h14v7.75a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V10.5Z" />
+      <path d="m12 4.75-3.4 3.75h6.8L12 4.75Z" />
+      <path d="m9.5 15 1.75 1.75L14.75 13" />
+    </svg>
+  `,
+  pan: `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4.75" y="6.25" width="14.5" height="11.5" rx="2.25" />
+      <circle cx="9.1" cy="11.2" r="1.7" />
+      <path d="M12.5 10h3.8M12.5 12.6h3.8M7.6 15.2h8.7" />
+    </svg>
+  `,
+  aadhaar: `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19.25s4.75-4.05 4.75-8.05a4.75 4.75 0 1 0-9.5 0c0 4 4.75 8.05 4.75 8.05Z" />
+      <circle cx="12" cy="11.25" r="1.7" />
+      <path d="M17.2 18.25h2.05M18.225 17.2v2.1" />
+    </svg>
+  `,
+  certificate: `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="5.25" y="5.25" width="13.5" height="10.75" rx="2" />
+      <path d="M9 9.4h6M9 12.1h4.5" />
+      <path d="M13.5 16v3.5l-1.5-.9-1.5.9V16" />
+    </svg>
+  `,
+  online: `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4.75" y="5.5" width="14.5" height="12.5" rx="2.25" />
+      <path d="M8.2 9.4h7.6M8.2 12.2h5.1" />
+      <path d="m12.5 14.4 3.65 4.35.2-2.4 2.15-.75-6-3.2Z" />
+    </svg>
+  `,
+};
+
+const renderCardIcon = (icon: string | undefined, className: string) => {
+  if (!icon) {
+    return '';
+  }
+
+  const svg = cardIcons[icon];
+
+  if (!svg) {
+    return '';
+  }
+
+  return `<span class="${className}__icon" aria-hidden="true">${svg}</span>`;
+};
+
 const renderCards = (
-  cards: readonly { title: string; body: string; note?: string }[],
+  cards: readonly { title: string; body: string; note?: string; icon?: string }[],
   className: string,
 ) =>
   cards
     .map(
-      ({ title, body, note }) => `
+      ({ title, body, note, icon }) => `
         <article class="${className}">
+          ${renderCardIcon(icon, className)}
           <h3>${title}</h3>
           <p>${body}</p>
           ${note ? `<p class="${className}__note">${note}</p>` : ''}
